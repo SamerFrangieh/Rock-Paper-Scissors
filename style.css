@@ -1,0 +1,88 @@
+.creepster-regular {
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+body{
+    background-color: #283149;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    color: #ad0fdd;
+    text-shadow: 3px 3px #57A6A1;
+    margin: 0;
+}  
+
+h2{
+    display: flex;
+    justify-content: center;
+    font-size: 80px;
+    color: #bd3333;
+    text-shadow: 3px 3px #ffffff;
+    margin: 10px;
+}
+h3{
+    display: flex;
+    font-size: 40px;
+    color: #69aef3;
+    text-shadow: 3px 3px #163634;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.fight img{
+    height: 300px;
+    margin: 40px;
+   
+}
+
+.pressed {
+    box-shadow: 0 3px 4px 0 #DBEDF3;
+    opacity: 0.5;
+  }
+
+.butt{
+    outline: none;
+  border: 10px solid #404B69;
+  font-size: 5rem;
+  font-family: 'Arvo', cursive;
+  line-height: 2;
+  font-weight: 900;
+  color: #DA0463;
+  text-shadow: 3px 0 #DBEDF3;
+  border-radius: 15px;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  margin: 10px;
+  background-color: white;
+    
+
+}
+
+.buttons{
+    text-align: center;
+    margin: 20px;
+}
+.rock{
+    background-image: url("./images/pngtree-cartoon-rock-transparent-png-image_6122807.png");
+    background-size: 130px;
+}
+
+.paper{
+    background-image: url("./images/paper.webp");
+    background-size: 130px;
+}
+.scissors{
+    background-image: url("./images/2644fd66c3d4de114b00ea2e6a36dd62-scissors-playful-cartoon.webp");
+    background-size: 130px;
+}
