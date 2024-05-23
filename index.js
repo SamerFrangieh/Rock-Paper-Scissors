@@ -27,7 +27,7 @@ function theGame(){
         switch(type){
 
             case('rock'):
-                document.querySelector('.img1 img').setAttribute('src','./images/pngtree-cartoon-rock-transparent-png-image_6122807.png');
+                document.querySelector('.img1 img').setAttribute('src','./images/rock.webp');
                 break;
 
             case('paper'):
@@ -56,7 +56,7 @@ function theGame(){
         },1000);
 
         if(ran === 1){
-            document.querySelector('.img2 img').setAttribute('src','./images/pngtree-cartoon-rock-transparent-png-image_6122807.png');
+            document.querySelector('.img2 img').setAttribute('src','./images/rock.webp');
             ran = 'rock';
         }
         if(ran === 2){
