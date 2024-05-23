@@ -47,28 +47,37 @@ function theGame(){
     }
 
     function randomImage(type1){
-        var ran = (Math.floor(Math.random() * 3)) + 1;
+        let index = 0;
+        var images = ['./images/rock.webp',"./images/paper.webp","./images/2644fd66c3d4de114b00ea2e6a36dd62-scissors-playful-cartoon.webp"]
+
+        let interval = setInterval(function(){
+            document.querySelector('.img2 img').setAttribute('src',images[index]);
+            index = ((index + 1)%3);
+
+        },80)
 
         setTimeout(function(){
-            for(let i=0; i<10;i++){
+            clearInterval(interval);
+            var ran = (Math.floor(Math.random() * 3)) + 1;
 
+            if(ran === 1){
+                document.querySelector('.img2 img').setAttribute('src','./images/rock.webp');
+                ran = 'rock';
             }
-        },1000);
+            if(ran === 2){
+                document.querySelector('.img2 img').setAttribute('src',"./images/paper.webp");
+                ran = 'paper';
+            }
+            if(ran === 3){
+                document.querySelector('.img2 img').setAttribute('src',"./images/2644fd66c3d4de114b00ea2e6a36dd62-scissors-playful-cartoon.webp");
+                ran = 'scissors';
+            }
 
-        if(ran === 1){
-            document.querySelector('.img2 img').setAttribute('src','./images/rock.webp');
-            ran = 'rock';
-        }
-        if(ran === 2){
-            document.querySelector('.img2 img').setAttribute('src',"./images/paper.webp");
-            ran = 'paper';
-        }
-        if(ran === 3){
-            document.querySelector('.img2 img').setAttribute('src',"./images/2644fd66c3d4de114b00ea2e6a36dd62-scissors-playful-cartoon.webp");
-            ran = 'scissors';
-        }
+            findWinner(type1, ran);
 
-        findWinner(type1, ran);
+
+        },1000)
+        
     }
 
     function findWinner(type1, type2){
