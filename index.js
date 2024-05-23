@@ -2,9 +2,15 @@ function theGame(){
 
     var audio = new Audio("./audios/caribbean-beach-vocalista-main-version-32879-02-00.mp3");
     audio.volume = 0.20;
-    audio.play();
+    //audio.play();
+    audio.loop = true;
     var youScore = 0;
     var aiScore = 0;
+    var win = new Audio('./audios/bonus-points-190035.mp3');
+    var loss = new Audio('./audios/negative_beeps-6008.mp3');
+    var draw = new Audio('./audios/knife-slice-41231.mp3');
+    
+    
 
     
 
@@ -85,34 +91,41 @@ function theGame(){
 
         if(type1 === type2){
             document.querySelector("h2").innerHTML = 'Draw';
+            draw.play();
         }
         else if(type1 == 'rock' && type2 == 'paper'){
             document.querySelector("h2").innerHTML = 'You Lose';
+            loss.play();
             aiScore+=1;
             document.querySelector("h3").innerHTML = "You:"+youScore+' - Ai:'+aiScore;
         }
         else if(type1 == 'rock' && type2 == 'scissors'){
             document.querySelector("h2").innerHTML = 'You Win';
+            win.play();
             youScore+=1;
             document.querySelector("h3").innerHTML = "You:"+youScore+' - Ai:'+aiScore;
         }
         else if(type1 == 'paper' && type2 == 'rock'){
             document.querySelector("h2").innerHTML = 'You Win';
+            win.play();
             youScore+=1;
             document.querySelector("h3").innerHTML = "You:"+youScore+' - Ai:'+aiScore;
         }
         else if(type1 == 'paper' && type2 == 'scissors'){
             document.querySelector("h2").innerHTML = 'You Lose';
+            loss.play();
             aiScore+=1;
             document.querySelector("h3").innerHTML = "You:"+youScore+' - Ai:'+aiScore;
         }
         else if(type1 == 'scissors' && type2 == 'paper'){
             document.querySelector("h2").innerHTML = 'You Win';
+            win.play();
             youScore+=1;
             document.querySelector("h3").innerHTML = "You:"+youScore+' - Ai:'+aiScore;
         }
         else if(type1 == 'scissors' && type2 == 'rock'){
             document.querySelector("h2").innerHTML = 'You Lose';
+            loss.play();
             aiScore+=1;
             document.querySelector("h3").innerHTML = "You:"+youScore+' - Ai:'+aiScore;
         }
