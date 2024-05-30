@@ -2,7 +2,7 @@ function theGame(){
 
     var audio = new Audio("./audios/caribbean-beach-vocalista-main-version-32879-02-00.mp3");
     audio.volume = 0.20;
-    //audio.play();
+    audio.play();
     audio.loop = true;
     var youScore = 0;
     var aiScore = 0;
